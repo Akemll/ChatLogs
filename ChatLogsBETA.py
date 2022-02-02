@@ -36,7 +36,7 @@ def dinamico(palavra, rosaa=False):
 def atualizacao(oi=False):
     global textos, listanomes
     for e in canais:
-        recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit=50", headers={"Authorization": "ODUzNDc2NjQ5NTg4NzUyMzg0.YdHmuA.xufnJnhEuV84k5pJSkOTqSFboso", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
+        recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit=50", headers={"Authorization": "Token", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
         if not oi:
             dinamico(f"Status de {e}: Analisando...", True)
         if recebido.status_code < 300 and recebido.status_code >= 200:
@@ -73,7 +73,7 @@ print("", end="\n")
 while True:
     time.sleep(0.1)
     for e in canais:
-        recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit=100", headers={"Authorization": "ODUzNDc2NjQ5NTg4NzUyMzg0.YdHmuA.xufnJnhEuV84k5pJSkOTqSFboso", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
+        recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit=100", headers={"Authorization": "Token", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
         if recebido.status_code < 300 and recebido.status_code >= 200:
             conteudo = recebido.json()
             listap = {}
