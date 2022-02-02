@@ -9,8 +9,9 @@ try:
     token = str(input("Informe o token do seu discord:"))
     limite = str(input("Informe o numero de mensagem que vai ficar dentro do range do script em cada canal(Recomendado 50):"))
     canais = str(input("Informe os canais desejados, seguindo o padrao (403249, 29394, 3920):")).split(", ")
-except KeyboardInterrupt:
-      pass
+    tempo = float(input("Quanto tempo quer de espera pra o script analisar os chats novamente? (Padrao:0.1)"))
+except Exception:
+      canais = []
 contar = 0
 conteudo = ""   
 antigo = 0
@@ -22,6 +23,11 @@ canaisp = {}
 listanomes = {}
 attachment = {}
 posi = {}
+#Fim
+
+#Anti-Bug
+if tempo < 0.1:
+    tempo = 0.1
 #Fim
 
 #Funções
@@ -78,10 +84,10 @@ if token and limite:
      print("", end="\n")
 try:
    while True:
-       if not canais or not token or not limite or not limite.isnumeric() or limite < 5:
+       if not canais or not token or not limite or not limite.isnumeric() or limite < 5 or not tempo:
            dinamico("Argumentos faltando para continuacao, verifice os argumentos de canais,token, e limite.", True)
            break
-       time.sleep(0.1)
+       time.sleep(tempo)
        for e in canais:
            recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit={limite}", headers={"Authorization": f"{token}", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
            if recebido.status_code < 300 and recebido.status_code >= 200:
