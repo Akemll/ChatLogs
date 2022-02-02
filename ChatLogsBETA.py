@@ -8,6 +8,7 @@ import time
 try:
     token = str(input("Informe o token do seu discord:"))
     limite = str(input("Informe o numero de mensagem que vai ficar dentro do range do script em cada canal(Recomendado 50):"))
+    canais = str(input("Informe os canais desejados, seguindo o padrao (403249, 29394, 3920):")).split(", ")
 except KeyboardInterrupt:
       pass
 contar = 0
@@ -17,7 +18,6 @@ co = 0
 rosa = "\033[31m"
 branco = "\033[0;0m"
 textos = {}
-canais = [""]
 canaisp = {}
 listanomes = {}
 attachment = {}

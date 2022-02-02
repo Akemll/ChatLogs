@@ -1,1 +1,1 @@
-Para utilizar, instalem o python na mais atual versao, apos isso vao no cmd deem pip install requests, e apos isso abram o script e setem os id de canais que voce deseja usar(variavel canais) exemplo: ['1234', '1425']
+Para utilizar, instalem o python e apos isso vao no cmd e instalem a biblioteca requests, dando pip install requests
