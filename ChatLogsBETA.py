@@ -32,7 +32,7 @@ if tempo < 0.1:
 
 #Funções
 def dinamico(palavra, rosaa=False):
-    global antigo, listanomes, attachment
+    global antigo, listanomes
     conteudo = ""
     print(" "*antigo, end="\r")
     if rosaa:
