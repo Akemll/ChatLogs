@@ -78,7 +78,7 @@ if token and limite:
      print("", end="\n")
 try:
    while True:
-       if not canais or not token or not limite:
+       if not canais or not token or not limite or not limite.isnumeric() or limite < 5:
            dinamico("Argumentos faltando para continuacao, verifice os argumentos de canais,token, e limite.", True)
            break
        time.sleep(0.1)
@@ -105,7 +105,7 @@ try:
                                      textos[e][pp] = listap[e][pp]
                                      print("", end="\n\n")
                             else:
-                               if posi[pp] < 46 and textos[e][pp] is not None:
+                               if posi[pp] < (limite - 4) and textos[e][pp] is not None:
                                   if pp in attachment:
                                      dinamico(f"Mensagem deletada: \nUsuário:{listanomes[pp]}\nConteudo:{textos[e][pp]}\nAttachment:{attachment[pp]}", True)
                                   else:
