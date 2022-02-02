@@ -70,7 +70,6 @@ def atualizacao(oi=False):
         else:
             dinamico(f"Não foi possível estabelecer conexão com {e}, verifique as condições.")
             canais.remove(e)
-    return None
 #Fim
 
 if token and limite:
