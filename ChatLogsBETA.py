@@ -8,7 +8,7 @@ import time
 try:
     token = str(input("Informe o token do seu discord:"))
     limite = str(input("Informe o numero de mensagem que vai ficar dentro do range do script em cada canal(Recomendado 50):"))
-    canais = str(input("Informe os canais desejados, seguindo o padrao (403249, 29394, 3920):")).split(", ")
+    canais = str(input("Informe os canais desejados, seguindo o padrao,exemplo(403249, 29394, 3920):")).split(", ")
     tempo = float(input("Quanto tempo quer de espera pra o script analisar os chats novamente? (Padrao:0.1)"))
 except Exception:
       canais = []
