@@ -78,7 +78,7 @@ if token and limite:
      print("", end="\n")
 try:
    while True:
-       if canais == [] or not token or not limite:
+       if not canais or not token or not limite:
            dinamico("Argumentos faltando para continuacao, verifice os argumentos de canais,token, e limite.", True)
            break
        time.sleep(0.1)
