@@ -39,7 +39,7 @@ def dinamico(palavra, rosaa=False):
 
 
 def atualizacao(oi=False):
-    global textos, listanomes
+    global textos, listanomes, token, limite
     for e in canais:
         recebido = requests.get(f"https://discord.com/api/v9/channels/{e}/messages?limit={limite}", headers={"Authorization": f"{token}", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"})
         if not oi:
