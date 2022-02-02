@@ -1,1 +1,1 @@
-Para utilizar, instalem o python e apos isso vao no cmd e instalem a biblioteca requests, dando pip install requests. (Recomendado que seja poucos canais setados no script dependendo da sua internet e potencia computacional. Site Python:https://www.python.org/downloads/
+Para utilizar, instalem o python e apos isso vao no cmd e instalem a biblioteca requests, dando pip install requests. (Recomendado que seja poucos canais setados no script dependendo da sua internet e potencia computacional.) Site Python:https://www.python.org/downloads/
